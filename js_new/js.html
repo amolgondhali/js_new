@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+    <script src="dom.js"></script>
+</head>
+
+<style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    .button { margin: 5px; padding: 10px 20px; font-size: 16px; }
+    #result { margin-top: 20px; font-size: 18px; }
+</style>
+
+<body>
+
+<input type="" name="u_name">
+<button onclick="getName()">sumbit</button>   
+
+<h1></h1>
+
+<h2>click</h2>
+
+
+<!-- //doqument by id selector is manupaleing html content user uniq attribute values of id  -->
+
+<h1 id="main-header">Hello World</h1>
+<button id="change-text-button">Change Text</button>
+
+<script>
+    // Access the button and add a click event listener
+    document.getElementById("change-text-button").addEventListener("click", function() {
+        // Change the text of the header when the button is clicked
+        document.getElementById("main-header").innerHTML = "Text Changed!";
+    });
+</script>
+
+<div class="item">Item 1</div>
+<div class="item">Item 2</div>
+<div class="item">Item 3</div>
+
+<button id="change-color-button">Change Color</button>
+
+
+<script>
+    document.getElementById("change-color-button").addEventListener("click", function() {
+        var items = document.getElementsByClassName("item");
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.color = "PINK";
+        }
+    });
+</script>
+
+<!-- // query selector  fields -->
+
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+<button onclick="calculateSum()">Calculate Sum</button>
+<h1 id="result">Result will be displayed here</h1>
+
+
+<script>
+
+    function calculateSum ()
+
+     {
+     
+        var num1 = parseFloat(document.querySelector("#num1").value);
+        var num2 = parseFloat(document.querySelector("#num2").value);
+           
+        var sum = num1 + num2;
+        
+       
+        document.querySelector("#result").innerHTML = "Sum: " + sum;
+
+    }
+
+    var a = document.querySelector("h2")
+      a.addEventListener("click",function()
+
+      {
+
+       a.innerHTML = "amol gondhali"
+      a.style.color = "yellow"
+      a.style.backgroundColor = "red"
+
+    })
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b>Appended </b>.");
+  });
+
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended</li>");
+  });
+
+});
+
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+
+<script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("p").hide();
+      });
+      $("#show").click(function(){
+        $("p").show();
+      });
+    });
+    </script>
+
+
+    </head>
+    <body>
+    
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    
+<br><br>
+<button id="myBtn">Time</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<br><br>
+<h1>Rock, Paper, Scissors Game</h1>
+<button class="button" onclick="playGame('rock')">Rock</button>
+<button class="button" onclick="playGame('paper')">Paper</button>
+<button class="button" onclick="playGame('scissors')">Scissors</button>
+<div id="result"></div>
+</body>
+</html>
+
+ 
